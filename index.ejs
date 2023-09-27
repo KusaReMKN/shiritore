@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShiritoRe</title>
+</head>
+<body>
+<header>
+<h1>ShiritoRe</h1>
+</header>
+<main>
+<p>
+The current word is <b><%= words.at(-1); %></b>.
+</p>
+<form method="POST">
+<fieldset>
+<legend>Submit a new word!</legend>
+<label for="word">Next word:</label>
+<input type="text" id="word" name="word" required>
+<input type="submit">
+</fieldset>
+</form>
+</main>
+<aside>
+<h2>History</h2>
+<ol><%
+function escapeHtml(s) {
+    return [...s].map(c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c] || c)).join('');
+}
+%>
+<li><%- words.map(e => escapeHtml(e)).join('</li>\n<li>'); %></li>
+</ol>
+</aside>
+<footer>
+<small>Copyright &copy; 2023 KusaReMKN.</small>
+</footer>
+</body>
+</html>

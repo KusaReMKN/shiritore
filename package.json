@@ -1,0 +1,23 @@
+{
+  "name": "shiritore",
+  "version": "0.0.0",
+  "description": "A word game like Shiritori",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KusaReMKN/shiritore.git"
+  },
+  "author": "KusaReMKN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KusaReMKN/shiritore/issues"
+  },
+  "homepage": "https://github.com/KusaReMKN/shiritore#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "sqlite3": "^5.1.6"
+  }
+}
