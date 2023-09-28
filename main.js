@@ -154,7 +154,8 @@ postShiritore(req, res, shirid)
         db.serialize(() => {
             const throwError = err => { if (err) throw err; };
             db.exec('BEGIN TRANSACTION;', throwError);
-            db.run('INSERT INTO shiritore ( word, author ) VALUES ( $word, $author )',
+            db.run(`INSERT OR IGNORE INTO shiritore
+                        ( word, author ) VALUES ( $word, $author )`,
                 { $word: word, $author: shirid }, throwError);
             db.exec('COMMIT TRANSACTION;', throwError);
         });
