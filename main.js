@@ -165,7 +165,7 @@ postShiritore(req, res, shirid)
     }
 
     /* Redirect with GET request */
-    res.writeHead(303, { 'Location': '/' });
+    res.writeHead(303, { 'Location': './' });
     res.end();
 }
 
