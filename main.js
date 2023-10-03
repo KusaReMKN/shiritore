@@ -86,7 +86,7 @@ getShiritore(req, res)
     try {
         /* Retrieve a list of words from the database */
         const rows = await new Promise((res, rej) =>
-            db.all('SELECT word FROM shiritore ORDER BY postAt;', (err, rows) =>
+            db.all('SELECT word FROM shiritore ORDER BY postAt DESC;', (err, rows) =>
                 err ? rej(err) : res(rows)));
 
         /* Send a response message by applying them to the template */

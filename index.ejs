@@ -11,7 +11,7 @@
 </header>
 <main>
 <p>
-The current word is <b><%= words.at(-1); %></b>.
+The current word is <b><%= words[0]; %></b>.
 </p>
 <form method="POST">
 <fieldset>
@@ -24,7 +24,7 @@ The current word is <b><%= words.at(-1); %></b>.
 </main>
 <aside>
 <h2>History</h2>
-<ol><%
+<ol reversed><%
 function escapeHtml(s) {
     return [...s].map(c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c] || c)).join('');
 }
