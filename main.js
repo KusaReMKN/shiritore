@@ -90,6 +90,7 @@ getShiritore(req, res)
                 err ? rej(err) : res(rows)));
 
         /* Send a response message by applying them to the template */
+        res.writeHead(200, 'OK', { 'Content-Type': 'text/html; charset=utf-8' });
         res.end(ejs.render(HTML_TEMPLATE, { words: rows.map(e => e['word']) }));
     } catch (err) {
         errorEnd(500, err)(req, res);
