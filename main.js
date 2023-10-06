@@ -32,7 +32,7 @@ generateUUID()
     const randomByte = _ => Math.random() * 256 | 0;
 
     /** x in n-digit hexadecimal notation */
-    const leadZero = (x, n) => ('0'.repeat(n) + (+x).toString(16)).slice(-n);
+    const leadZero = (x, n) => (+x).toString(16).padStart(n, '0');
 
     const buf = [];
     for (let i = 0; i < 4; i++)
