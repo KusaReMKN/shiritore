@@ -3,7 +3,7 @@
 しりとりは前の語の最後の音から始まる語を挙げていく日本の言葉遊びです。
 ShiritoRe は前の文字列の最後の文字から始まる文字列を挙げていく言葉遊びです。
 
-https://soine.site/~mkn/shiritore/ で実際に遊ぶことができます。
+https://unstable.kusaremkn.com/shiritore/ で実際に遊ぶことができます。
 
 ## ルール
 
